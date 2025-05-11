@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/anti-counterfeit-product-identification-system-using-blockchain-main.iml" filepath="$PROJECT_DIR$/anti-counterfeit-product-identification-system-using-blockchain-main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/verityvault.iml" filepath="$PROJECT_DIR$/verityvault.iml" />
     </modules>
   </component>
 </project>

@@ -11,7 +11,7 @@ import TimelineOppositeContent, {
 } from '@mui/lab/TimelineOppositeContent';
 import dayjs from 'dayjs';
 import { useLocation, useNavigate } from 'react-router-dom';
-import abi from '../../utils/Identeefi.json';
+import abi from '../../utils/VERITYVAULT.json';
 import { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import { ethers } from "ethers";

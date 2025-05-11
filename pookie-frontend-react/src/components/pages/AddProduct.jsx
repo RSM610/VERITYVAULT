@@ -4,7 +4,7 @@ import { TextField, Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import { ethers } from "ethers";
 import axios from 'axios';
-import abi from '../../utils/Identeefi.json';
+import abi from '../../utils/VERITYVAULT.json';
 import QRCode from 'qrcode.react';
 import dayjs from 'dayjs';
 import useAuth from '../../hooks/useAuth';
@@ -298,7 +298,7 @@ const AddProduct = () => {
             top: 0,
             bottom: 0,
             backgroundSize: 'cover',
-           
+
             zIndex: -2,
             overflowY: "scroll"
         }}>

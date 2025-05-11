@@ -1,62 +1,203 @@
-# Anti-Counterfeit Product Identification System Using Blockchain
-
-The Anti-Counterfeit Product Identification System Using Blockchain is an innovative solution that uses blockchain technology to combat counterfeit products in various industries. It uses QR codes, smart contracts, and the Ethereum network to provide a secure and transparent platform for tracking and verifying product authenticity. The system is significant in addressing global supply chain issues by reducing the prevalence of counterfeit goods and enhancing transparency and trust. 
-
-## Live Demo
-Here is a live demo of the full functionality of the project 
-
-[![Product Live Demo](https://img.youtube.com/vi/aWkgaCfMEn8/0.jpg)](https://www.youtube.com/watch?v=aWkgaCfMEn8 "Product Walkthrough")
-
-Here is a blog plost of this project:
-https://medium.com/p/68d23c7bc41c
-
-
-## Table of Contents
-- [Overview](#overview)
-- [Basic Walkthrough](#basic-walkthrough)
-- [Technologies Used](#technologies-used)
-- [Features](#features)
-- [Project Setup](#project-setup)
+# VerityVault - Blockchain Document Verification System
 
 ## Overview
-The Anti-Counterfeit Product Identification System Using Blockchain is a groundbreaking solution designed to combat global supply chain issues related to counterfeit products. It leverages the unique capabilities of blockchain technology to provide a secure and transparent platform for tracking and verifying the authenticity of products across various industries.
 
-The system uses QR codes, an overt technology that can be scanned by a smartphone app, to verify product information and origin. It employs smart contracts to store and execute product verification logic on the blockchain, ensuring tamper-proof data and trustless transactions. The Ethereum network serves as its decentralized database to store product information and status, accessible by authorized parties. A web interface, powered by React, allows users to interact with the system and view product information and history.
-
-The technologies used in this system include Solidity for smart contract development, Hardhat for Ethereum development environment, React for building the user interface, Node.js for backend development, and ethers.js for interacting with the Ethereum blockchain.
-
-This system is significant in solving global supply chain issues as it provides a reliable method to verify the authenticity of products, thereby reducing the prevalence of counterfeit goods. It enhances transparency and trust among stakeholders in the supply chain, from manufacturers to consumers. 
-
-## Basic Walkthrough
-- The `identeefi-backend-node` directory contains the codebase for the backend of the system.
-- The `identeefi-frontend-react` directory contains the codebase for the frontend of the system.
-- The `identeefi-postgres-database` directory contains the csv files for the backend database.
-- The `identeefi-smartcontract-solidity` directory contains the smart contract deployed to the Ethereum network.
-
-## Technologies Used
-- Solidity
-- Hardhat
-- React
-- Node.js
-- ethers.js
+VerityVault is a blockchain-based platform designed to securely verify and store documents, ensuring authenticity and immutability for academic certificates, legal documents, and other critical records. Each document is assigned a unique digital ID recorded on the Ethereum blockchain (Sepolia Testnet). Users can scan a document's QR code or enter its ID to verify its authenticity, combating document fraud and fostering trust.
 
 ## Features
-- **QR Codes**: The system uses QR codes as an overt technology that can be scanned by a smartphone app to verify the product information and origin.
-- **Smart Contracts**: The system uses smart contracts to store and execute the product verification logic on the blockchain, ensuring tamper-proof data and trustless transactions.
-- **Ethereum Network**: The system uses the Ethereum network as its decentralized database to store the product information and status, which can be accessed by authorized parties.
-- **Web Interface**: The system uses a web interface powered by React to allow users to interact with the system and view the product information and history.
 
-## Project Setup
-To get started with this project, 
-1. Clone the repository.
-2. In `identeefi-postgres-database`, import the csv files to your own postgres database.
-3. In `identeefi-backend-node`, run `npm i` to install the dependencies and change the postgres credentials to your postgres crediantials and run `node postgres.js` to start the backend execution.
-4. In `identeefi-frontend-react`, run `npm i` to install the dependencies and run `npm start` to start localhost.
-5. You can inspect `identeefi-smartcontract-solidity` directory to view the smart contract details that is deployed to the Sepolia Testnet.
-6. To perform transactions, setup your Metamask wallet and connect your wallet to the Sepolia Tesnet Network and transact using SepoliaETH which can be obtained for free on Seplolia Faucet (https://sepoliafaucet.com/).
+- Secure login system with role-based authentication (Administrator, Issuer, Verifier, User)
+- Document upload and storage with blockchain integration
+- QR code generation and scanning for document verification
+- Wallet integration (MetaMask) for blockchain transactions
+- Profile management for authorised users
+- Document update functionality for authorised users
+- Admin tools for account management
 
-For more information, you can view our user manual:
-[View User Manual](/user-manual.pdf)
+## Technology Stack
 
+- **Frontend**: React.js
+- **Backend**: Node.js (Express)
+- **Blockchain**: Ethereum (Solidity, Sepolia Testnet)
+- **Database**: PostgreSQL
+- **Version Control**: GitHub, IntelliJ IDE
+- **Project Management**: Jira
+- **Wallet**: MetaMask
 
+## Prerequisites
 
+- Node.js (&gt;= 16.x)
+- PostgreSQL (&gt;= 13.x)
+- MetaMask browser extension
+- Ethereum client (e.g., Sepolia Testnet via Infura or Alchemy)
+- Git
+- Camera-enabled device for QR code scanning
+
+## Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/TeamCampusConnect/university-portal.git
+   cd university-portal
+   ```
+
+2. **Install Dependencies**:
+
+   - Backend:
+
+     ```bash
+     cd backend
+     npm install
+     ```
+   - Frontend:
+
+     ```bash
+     cd ../frontend
+     npm install
+     ```
+
+3. **Set Up Environment Variables**:
+
+   - Create a `.env` file in the `backend` directory with:
+
+     ```env
+     DATABASE_URL=postgresql://user:password@localhost:5432/verityvault
+     JWT_SECRET=your_jwt_secret
+     ETHEREUM_NODE_URL=https://sepolia.infura.io/v3/your-infura-key
+     ```
+
+4. **Initialize the Database**:
+
+   - Run the SQL schema scripts to set up tables:
+
+     ```sql
+     CREATE TABLE public.auth (
+         username VARCHAR(50) NOT NULL,
+         password VARCHAR(50) NOT NULL,
+         id SERIAL,
+         role VARCHAR(50) NOT NULL,
+         PRIMARY KEY (id, username)
+     );
+     
+     CREATE TABLE public.profile (
+         name VARCHAR(50),
+         description VARCHAR(500),
+         username VARCHAR(50) NOT NULL,
+         website VARCHAR,
+         location VARCHAR(50),
+         image VARCHAR(50),
+         role VARCHAR(50),
+         id SERIAL PRIMARY KEY
+     );
+     
+     CREATE TABLE public.document (
+         documentId VARCHAR(50) NOT NULL PRIMARY KEY,
+         name VARCHAR(50),
+         documentHash VARCHAR(100)
+     );
+     ```
+
+5. **Deploy Smart Contracts**:
+
+   - Navigate to the `blockchain` directory and deploy contracts using Truffle:
+
+     ```bash
+     cd blockchain
+     truffle migrate --network sepolia
+     ```
+
+6. **Start the Application**:
+
+   - Backend:
+
+     ```bash
+     cd backend
+     npm start
+     ```
+   - Frontend:
+
+     ```bash
+     cd frontend
+     npm start
+     ```
+
+## Usage
+
+### Normal User (Unauthorised)
+
+1. Scan a document's QR code using a camera-enabled device.
+2. Connect your MetaMask wallet to view document details and verify authenticity.
+3. Complete the wallet connection process.
+
+### Authorised User (General)
+
+1. Log in to the system with your credentials.
+2. Connect your MetaMask wallet.
+3. Check your profile details.
+4. Scan a document's QR code to view its details.
+5. Update documents if permitted by your role.
+
+### Administrator (Authorised)
+
+1. Log in with admin credentials.
+2. Add new accounts for users, issuers, or verifiers.
+3. Manage existing accounts (e.g., update roles, deactivate accounts).
+
+### Issuer (Authorised)
+
+1. Log in with issuer credentials.
+2. Connect your MetaMask wallet.
+3. Add a document to the blockchain by uploading it.
+4. Pay the transaction fees via MetaMask.
+5. Download the generated QR code for the document.
+6. Log out when finished.
+
+### Verifier (Authorised)
+
+1. Log in sustains
+2. Connect your MetaMask wallet.
+3. Check your profile details.
+4. Scan a document's QR code to view its details and verify authenticity.
+
+## Project Structure
+
+```
+university-portal/
+├── backend/                # Node.js/Express server and API logic
+├── blockchain/             # Solidity smart contracts and Truffle setup
+├── frontend/               # React.js frontend
+├── db/                     # Database schemas
+└── README.md
+```
+
+## Challenges Faced
+
+- Navigating Jira for project management
+- Camera lag during QR code scanning
+- Using deprecated blockchain library documentation, requiring older, less secure versions
+- Variable refactoring for consistent naming conventions
+- Initial difficulties connecting to the Sepolia Testnet
+- Acquiring initial Sepolia Ethereum for transactions
+
+## Contributing
+
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/your-feature`).
+3. Commit your changes (`git commit -m 'Add your feature'`).
+4. Push to the branch (`git push origin feature/your-feature`).
+5. Open a Pull Request.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For issues or inquiries, please open a ticket on our GitHub Issues page.
+
+## Acknowledgments
+
+- Faculty of Cyber Security, Ghulam Ishaq Khan Institute
+- Team Members: Rida Shahid Malik, Ummama Khan
+- Supervisor: Sir Said Nabi

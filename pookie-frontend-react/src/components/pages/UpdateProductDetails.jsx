@@ -8,7 +8,7 @@ import axios from 'axios';
 import Geocode from "react-geocode";
 import dayjs from 'dayjs';
 import { useLocation, useNavigate } from 'react-router-dom';
-import abi from '../../utils/Identeefi.json';
+import abi from '../../utils/VERITYVAULT.json';
 
 const options = ["true", "false"]
 
