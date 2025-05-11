@@ -77,7 +77,7 @@ const Guide = () => {
                 </Typography>
             </CustomBox>
 
-            <a href="pookie-frontend-react/src/User%20Manual.pdf" style={{ textDecoration: "none" }}>
+            <a href="pookie-frontend-react/src/User_Manual.pdf" style={{ textDecoration: "none" }}>
                 <CustomButton
                     backgroundColor="#0F1B4C"
                     color="#fff"
