@@ -32,7 +32,7 @@ const FakeProduct = () => {
                         textAlign: "center", marginBottom: "5%", marginTop: "5%", 
                     }}    
                 >
-                    Product Authentication Failed
+                    Document Authentication Failed
                 </Typography>
                 <Typography
                 variant="h5"
@@ -40,7 +40,7 @@ const FakeProduct = () => {
                     fontFamily: "Montserrat",
                     textAlign: "center", marginBottom: "5%", marginTop: "5%", 
                 }}   >
-                    We're sorry to inform you that the product you scanned is not authentic. It appears to be a counterfeit.
+                    We're sorry to inform you that the Document you scanned is not authentic. It appears to be a counterfeit.
                 </Typography>
 
                 <Typography
@@ -50,7 +50,7 @@ const FakeProduct = () => {
                         textAlign: "center", marginBottom: "5%", marginTop: "5%", 
                     }}    
                 >
-                    We take counterfeiting very seriously, and we are working to prevent it from happening. We advise you not to use this product, as it may not meet the safety and quality standards of the genuine product. If you have any concerns or questions, please contact the manufacturer of the genuine product for further assistance.
+                    We take counterfeiting very seriously, and we are working to prevent it from happening.
                 </Typography>
 
                 <Typography
@@ -60,7 +60,7 @@ const FakeProduct = () => {
                         textAlign: "center", marginBottom: "5%", marginTop: "5%", 
                     }}    
                 >
-                    Thank you for using our anti-counterfeit system. We hope it has helped you make informed purchasing decisions and protected you from counterfeit products.
+                    Thank you for using our anti-counterfeit system.
                 </Typography>
 
 

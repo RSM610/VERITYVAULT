@@ -6,7 +6,7 @@ import bgImg from '../../img/bg.png';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-const options = ["manufacturer", "supplier", "retailer"]
+const options = ["issuer", "verifier", "user"]
 
 const AddAccount = () => {
     const [user, setUser] = useState('');

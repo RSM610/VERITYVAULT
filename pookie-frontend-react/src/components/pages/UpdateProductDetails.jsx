@@ -217,7 +217,7 @@ const UpdateProductDetails = () => {
                         fontFamily: 'Gambetta', fontWeight: "bold", fontSize: "2.5rem"
                     }}
                 >
-                    Update Product Details</Typography>
+                    Update Document Details</Typography>
 
                     <TextField
                         fullWidth
@@ -257,7 +257,7 @@ const UpdateProductDetails = () => {
                         value={dayjs(currDate * 1000).format("MMMM D, YYYY h:mm A")}
                     />
 
-                    {auth.role === "supplier" ? null
+                    {auth.role === "Verifier" ? null
                         : <Autocomplete
                             disablePortal
                             id="combo-box-demo"
@@ -272,7 +272,7 @@ const UpdateProductDetails = () => {
                                     fullWidth
                                     id="outlined-basic"
                                     margin="normal"
-                                    label="Is Sold?"
+                                    label="Is Issued?"
                                     variant="outlined"
                                     inherit="False"
 
@@ -305,7 +305,7 @@ const UpdateProductDetails = () => {
                             onClick={handleSubmit}
                             sx={{ textAlign: "center", width: "50%", marginTop: "3%", backgroundColor: '#98b5d5', '&:hover': { backgroundColor: '#618dbd' } }}
                             >
-                            Update Product
+                            Update Document
                         </Button>
                     </Box>
 

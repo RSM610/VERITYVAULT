@@ -267,13 +267,13 @@ const AddProduct = () => {
           
         console.log("..............................");
         console.log("name: ", name);
-        console.log("brand: ", brand);
+        console.log("Type: ", brand);
         console.log("description: ", description);
         console.log("image: ", image.file.name);
         console.log("serialNumber: ", serialNumber);
-        console.log("manufacture date: ", manuDate);
-        console.log("manufactured at: ", manuLocation);
-        console.log("manufactured by: ", manuName);
+        console.log("Issue date: ", manuDate);
+        console.log("Issued at: ", manuLocation);
+        console.log("Issued by: ", manuName);
 
         checkUnique();
 
@@ -298,7 +298,7 @@ const AddProduct = () => {
             top: 0,
             bottom: 0,
             backgroundSize: 'cover',
-            backgroundRepeat: 'no-repeat',
+           
             zIndex: -2,
             overflowY: "scroll"
         }}>

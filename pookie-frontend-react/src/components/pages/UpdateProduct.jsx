@@ -210,7 +210,7 @@ const UpdateProduct = () => {
                     </TimelineSeparator>
                     <TimelineContent sx={{ py: '12px', px: 2 }}>
                         <Typography>Location: {item.location}</Typography>
-                        <Typography>Actor: {item.actor}</Typography>
+                        <Typography>Issuer: {item.actor}</Typography>
                     </TimelineContent>
                 </TimelineItem>
             );
@@ -253,7 +253,7 @@ const UpdateProduct = () => {
                             fontFamily: 'Gambetta', fontWeight: "bold", fontSize: "2.5rem"
                         }}
                     >
-                        Product Details</Typography>
+                        Document Details</Typography>
 
                     <Box
                         sx={{
@@ -324,7 +324,7 @@ const UpdateProduct = () => {
                                     textAlign: "left", marginBottom: "3%",
                                 }}
                             >
-                                Brand: {brand}
+                                Type: {brand}
                             </Typography>
 
                         </Box>
@@ -347,7 +347,7 @@ const UpdateProduct = () => {
                                 <TimelineDot />
                             </TimelineSeparator>
                             <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                <Typography>IsSold: {isSold.toString()}</Typography>
+                                <Typography>Is Issued: {isSold.toString()}</Typography>
                             </TimelineContent>
                         </TimelineItem>
                     </Timeline>

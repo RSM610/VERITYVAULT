@@ -13,7 +13,7 @@ const main = async () => {
     await historyTxn.wait();
     console.log("Product history added:", historyTxn.hash);
 
-    const history2Txn = await productContract.addProductHistory("001", "Supplier Group", "sloc", "12345678", false);
+    const history2Txn = await productContract.addProductHistory("001", "Verifier Group", "sloc", "12345678", false);
     await history2Txn.wait();
     console.log("Product history added:", history2Txn.hash);
 

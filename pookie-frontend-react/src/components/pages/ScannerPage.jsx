@@ -26,7 +26,7 @@ const ScannerPage = () => {
 
         if(contractAddress){
             if (contractAddress == CONTRACT_ADDRESS) {
-                if (auth.role === "supplier" || auth.role === "retailer") {
+                if (auth.role === "verifier" || auth.role === "user") {
                     navRole();
                 } else {
                     navUser();
@@ -64,7 +64,7 @@ const ScannerPage = () => {
         <Box sx={{
             backgroundImage: `url(${bgImg})`,
             minHeight: "80vh",
-            backgroundRepeat: "no-repeat",
+
             position: 'absolute',
             left: 0,
             right: 0,

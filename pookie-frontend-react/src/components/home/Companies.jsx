@@ -36,7 +36,7 @@ const Companies = () => {
                             mt: 2,
                         }}
                     >
-                        More than 45,000 trust Identeefi
+                        More than 45,000 trust VERITYVAULT
                     </Typography>
                 </CustomBox>
 

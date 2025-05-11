@@ -3,16 +3,19 @@ require("dotenv").config();
 
 task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
   const accounts = await hre.ethers.getSigners();
-
   for (const account of accounts) {
-      console.log(account.address);
+    console.log(account.address);
   }
 });
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.17",
+  defaultNetwork: "sepolia", // Set Sepolia as the default network
   networks: {
+    hardhat: {
+      // Local development network configuration
+    },
     goerli: {
       url: process.env.GOERLI_QUICKNODE_KEY,
       accounts: [process.env.PRIVATE_KEY],
@@ -26,5 +29,4 @@ module.exports = {
       accounts: [process.env.PRIVATE_KEY],
     }
   }
-  
 };
