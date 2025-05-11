@@ -47,16 +47,16 @@ const Hero = () => {
               }}
             >
 
-              Welcome to Identeefi
+              Welcome to VERITYVAULT
             </Typography>
             <Title variant="h1">
-              Securely Authenticate Your Products with Identeefi
+              Securely Authenticate Your Documents with VERITYVAULT
             </Title>
             <Typography
               variant="body2"
               sx={{ fontSize: "18px", color: "#5A6473", my: 4 }}
             >
-              Our blockchain-based product identification system provides a secure and reliable way to authenticate your products and protect against fraud
+              Our blockchain-based product identification system provides a secure and reliable way to authenticate your Documents
             </Typography>
             <Link to="/scanner">
 

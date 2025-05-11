@@ -103,12 +103,12 @@ export default function Login() {
                     }}
                 >
                     <Typography component="h1" variant="h5"
-                        sx={{
-                            textAlign: "center", marginBottom: "3%", marginTop: "3%",
-                            fontFamily: 'Gambetta', fontWeight: "bold", fontSize: "2.5rem"
-                        }}
+                                sx={{
+                                    textAlign: "center", marginBottom: "3%", marginTop: "3%",
+                                    fontFamily: 'Gambetta', fontWeight: "bold", fontSize: "2.5rem"
+                                }}
                     >
-                        IDENTEEFI
+                        VERITYVAULT
                     </Typography>
                     <Typography component="h1" variant="h5">
                         Login
