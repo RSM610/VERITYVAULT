@@ -38,8 +38,7 @@ VerityVault is a blockchain-based platform designed to securely verify and store
 1. **Clone the Repository**:
 
    ```bash
-   git clone https://github.com/TeamCampusConnect/university-portal.git
-   cd university-portal
+   gh repo clone RSM610/VERITYVAULT
    ```
 
 2. **Install Dependencies**:
@@ -47,27 +46,20 @@ VerityVault is a blockchain-based platform designed to securely verify and store
    - Backend:
 
      ```bash
-     cd backend
-     npm install
+     cd .\pookie-backend-node\  
+     npm i
+     
      ```
    - Frontend:
 
      ```bash
-     cd ../frontend
-     npm install
+     cd .\pookie-frontend-react\
+     npm i
+   
      ```
 
-3. **Set Up Environment Variables**:
 
-   - Create a `.env` file in the `backend` directory with:
-
-     ```env
-     DATABASE_URL=postgresql://user:password@localhost:5432/verityvault
-     JWT_SECRET=your_jwt_secret
-     ETHEREUM_NODE_URL=https://sepolia.infura.io/v3/your-infura-key
-     ```
-
-4. **Initialize the Database**:
+3. **Initialize the Database**:
 
    - Run the SQL schema scripts to set up tables:
 
@@ -98,27 +90,19 @@ VerityVault is a blockchain-based platform designed to securely verify and store
      );
      ```
 
-5. **Deploy Smart Contracts**:
 
-   - Navigate to the `blockchain` directory and deploy contracts using Truffle:
-
-     ```bash
-     cd blockchain
-     truffle migrate --network sepolia
-     ```
-
-6. **Start the Application**:
+4. **Start the Application**:
 
    - Backend:
 
      ```bash
-     cd backend
-     npm start
+     cd .\pookie-backend-node\  
+     node postgres.js
      ```
    - Frontend:
 
      ```bash
-     cd frontend
+      cd .\pookie-frontend-react\
      npm start
      ```
 
@@ -165,7 +149,7 @@ VerityVault is a blockchain-based platform designed to securely verify and store
 ```
 university-portal/
 ├── backend/                # Node.js/Express server and API logic
-├── blockchain/             # Solidity smart contracts and Truffle setup
+├── blockchain/             # Solidity smart contracts
 ├── frontend/               # React.js frontend
 ├── db/                     # Database schemas
 └── README.md
